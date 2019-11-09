@@ -1,32 +1,71 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <transition 
+    :name="transitionName"
+    mode="out-in"
+    @beforeLeave="beforeLeave"
+    @enter="enter">
     <router-view/>
-  </div>
+  </transition>
 </template>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .slide-left-enter-active,
+  .slide-left-leave-active,
+  .slide-right-enter-active,
+  .slide-right-leave-active {
+    transition-duration: 0.5s;
+    transition-property: height, opacity, transform;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+  }
 
-#nav {
-  padding: 30px;
-}
+  .slide-left-enter,
+  .slide-right-leave-active {
+    opacity: 0;
+    transform: translate(2em, 0);
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .slide-left-leave-active,
+  .slide-right-enter {
+    opacity: 0;
+    transform: translate(-2em, 0);
+  }
 </style>
+<script>
+const DEFAULT_TRANSITION = 'fade';
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      prevHeight: 0,
+      transitionName: DEFAULT_TRANSITION,
+    };
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      let transitionName = to.meta.transitionName || from.meta.transitionName;
+
+      if (transitionName === 'slide') {
+        const toDepth = to.path.split('/').length;
+        const fromDepth = from.path.split('/').length;
+        transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+      }
+
+      this.transitionName = transitionName || DEFAULT_TRANSITION;
+
+      next();
+    });
+  },
+  methods: {
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    }
+  }
+}
+</script>

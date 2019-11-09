@@ -1,0 +1,96 @@
+@tailwind base;
+
+@tailwind components;
+
+.top-bar{
+  @apply h-16 bg-white flex justify-between px-3 text-gray-700 fixed top-0 w-full z-20;
+}
+
+.top-bar h1{
+  @apply font-bold text-2xl leading-loose pt-2;
+}
+
+.content{
+  @apply w-full pt-20 px-4 h-screen;
+}
+
+.balance{
+  @apply mb-5 h-56 rounded-lg flex flex-col justify-around pt-10 pb-8 shadow-lg;
+}
+.balance-header{
+  @apply text-white text-center text-2xl;
+}
+.balance-saldo{
+  @apply text-white text-center font-semibold text-4xl tracking-widest mb-3 -mt-3
+}
+.balance-btn{
+  @apply rounded-full bg-white text-gray-700 h-12 w-32 flex flex-col justify-center;
+}
+.carousel{
+  @apply mb-5 h-48 rounded-lg flex max-w-full shadow-lg;
+}
+.carousel-nav{
+  @apply bg-transparent text-gray-100 w-10 z-10;
+}
+.carousel-nav:hover{
+  @apply text-white; 
+}
+.history{
+  @apply flex h-16 bg-gray-200 rounded mb-3 pr-6 pl-4;
+}
+.history-text{
+  @apply flex flex-col flex-grow justify-center;
+}
+.history-text span:first-child{
+  @apply flex-grow;
+}
+.history-text div:first-child{
+  @apply flex text-sm
+}
+.history-text div:last-child{
+  @apply flex text-xs text-gray-600 font-light;
+}
+.sidebar{
+  @apply w-4/5 max-w-xs h-screen bg-white fixed top-0 left-0 z-10 py-3 px-5 shadow-lg text-gray-800 z-30;
+}
+.sidebar-profile{
+  @apply flex flex-col border-b border-gray-500 p-2 pb-5;
+}
+.profile-pic{
+  @apply rounded-full h-20 w-20 flex-shrink-0 bg-cover bg-center;
+}
+.profile-desc{
+  @apply flex justify-center text-gray-800 flex-col;
+}
+.profile-desc h1{
+  @apply text-lg font-semibold;
+}
+.profile-desc a{
+  @apply text-sm font-light;
+}
+.sidebar-link{
+  @apply px-2 h-12 pt-2 block;
+}
+.sidebar-link:hover{
+  @apply bg-gray-400;
+}
+.select-container{
+  @apply flex-col absolute m-2 flex w-32 bg-gray-200 rounded text-sm text-gray-700;
+}
+.select-container:hover {
+  @apply shadow-xl;
+}
+.select-btn {
+  @apply p-2 text-left;
+}
+.select-item {
+  @apply bg-gray-100 p-2 text-left;
+}
+.select-item:hover {
+  @apply bg-blue-200;
+}
+.select-item:last-child {
+  @apply rounded-b;
+}
+
+@tailwind utilities;
