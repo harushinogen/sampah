@@ -54,7 +54,7 @@
   @apply w-4/5 max-w-xs h-screen bg-white fixed top-0 left-0 z-10 py-3 px-5 shadow-lg text-gray-800 z-30;
 }
 .sidebar-profile{
-  @apply flex flex-col border-b border-gray-500 p-2 pb-5;
+  @apply flex flex-col border-b border-gray-500 px-4 pt-2 pb-5;
 }
 .profile-pic{
   @apply rounded-full h-20 w-20 flex-shrink-0 bg-cover bg-center;
@@ -69,10 +69,10 @@
   @apply text-sm font-light;
 }
 .sidebar-link{
-  @apply px-2 h-12 pt-2 block;
+  @apply px-2 h-12 rounded pt-2 block font-semibold;
 }
-.sidebar-link:hover{
-  @apply bg-gray-400;
+.current-page{
+  @apply bg-green-200 text-green-600;
 }
 .select-container{
   @apply flex-col absolute m-2 flex w-32 bg-gray-200 rounded text-sm text-gray-700;

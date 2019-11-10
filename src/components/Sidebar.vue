@@ -11,10 +11,10 @@
       <div style="background-image: url(img/863589.png)" class="profile-pic"></div>
       <div class="profile-desc">
         <h1>Konjiki no Yami</h1>
-        <a href="#">Profile Page >></a>
+        <router-link to="/profile">Profile Page >></router-link>
       </div>
     </div>
-    <a href="#" class="sidebar-link">
+    <a href="#" class="sidebar-link mt-5 current-page">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -2 24 24" class="h-6 fill-current inline-block mx-2 -mt-1">
         <path d='M9 20V8h9v9a3 3 0 0 1-3 3H9zm-2 0H3a3 3 0 0 1-3-3V8h7v12zM18 6H0V3a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3z' />
       </svg>

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import App from '../App.vue'
 import HistoryPage from '../views/HistoryPage.vue'
+import ProfilePage from '../views/ProfilePage.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,12 @@ const routes = [
     path: '/history',
     name: 'history',
     component: HistoryPage,
+    meta: { transitionName: 'slide' }
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: ProfilePage,
     meta: { transitionName: 'slide' }
   },
   {

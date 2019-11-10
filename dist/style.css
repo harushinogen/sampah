@@ -820,7 +820,9 @@ video {
           flex-direction: column;
   border-bottom-width: 1px;
   border-color: #a0aec0;
-  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 1.25rem;
 }
 
@@ -862,12 +864,15 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   height: 3rem;
+  border-radius: 0.25rem;
   padding-top: 0.5rem;
   display: block;
+  font-weight: 600;
 }
 
-.sidebar-link:hover{
-  background-color: #cbd5e0;
+.current-page{
+  background-color: #c6f6d5;
+  color: #38a169;
 }
 
 .select-container{

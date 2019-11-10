@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b6c90d36ed2f86f42f237102c69f0bd2.js"
+  "/precache-manifest.8d57f35b547f3cfe5d49c6b666d88579.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "sampah"});
