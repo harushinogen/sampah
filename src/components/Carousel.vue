@@ -21,9 +21,6 @@
 <script>
 	export default {
 		name: 'carousel',
-		props: {
-			events: Array
-		},
 		data: function() {
 			return {
 				current: 0
@@ -44,6 +41,9 @@
 		computed: {
       margin: function (){
         return `${this.current * -100}%`
+      },
+      events() {
+        return this.$store.state.events;
       }
     }
 	}

@@ -31,8 +31,7 @@
 			v-on:mouseenter="() => showOrderItem = true">
 				<button 
 				v-on:click="() => showOrderItem = true" 
-				v-bind:class="{shadow: showOrderItem}"
-				class="select-btn">{{ selectedOrder }}
+				class="select-btn rounded-t z-20">{{ selectedOrder }}
 					<svg 
 					xmlns="http://www.w3.org/2000/svg" viewBox="-5 -8 24 24" v-show="!showOrderItem"
 					class="fill-current h-5 inline-block float-right -mb-1">
