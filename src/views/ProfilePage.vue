@@ -1,8 +1,8 @@
 <template>
-  <div id="profile">
+  <div id="profile" class="flex flex-col">
     <div class="rounded-b-lg h-64 shadow-lg pt-3 text-gray-100" style="background: linear-gradient(119.15deg, #68D391 0%, #38A169 100.7%);">
       <Titlebar title="Profile"></Titlebar>
-      <div style="background-image: url(img/863589.png)" class="profile-pic mx-auto h-24 w-24"></div>
+      <div style="background-image: url(img/863589.png)" class="profile-pic mx-auto h-24 w-24 border-4 border-white"></div>
       <p class="text-xl text-center mt-2">Konjiki no Yami</p>
       <p class="text-center">@yami_chan</p>
     </div>
@@ -31,6 +31,9 @@
           </svg>
         </div>
       </div>
+    </div>
+    <div class="flex justify-center justify-end flex-grow flex-col pt-20">
+      <router-link to="/landing" class="text-white text-center text-xl pt-3 pb-4 w-40 font-semibold rounded-full bg-red-500 mx-auto">Logout</router-link>
     </div>
   </div>
 </template>

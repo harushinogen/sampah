@@ -21,25 +21,25 @@
 <script>
 	export default {
 		name: 'carousel',
-		data: function() {
+		data() {
 			return {
 				current: 0
 			}
 		},
 		methods: {
-			slideLeft: function () {
+			slideLeft(){
         if (this.events.length-1 > this.current) {
           this.current++;
         }
       },
-      slideRight: function () {
+      slideRight() {
         if(this.current > 0) {
           this.current--;
         }
       },
 		},
 		computed: {
-      margin: function (){
+      margin(){
         return `${this.current * -100}%`
       },
       events() {

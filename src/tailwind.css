@@ -15,7 +15,7 @@
 }
 
 .balance{
-  @apply mb-5 h-56 rounded-lg flex flex-col justify-around pt-10 pb-8 shadow-lg;
+  @apply mb-5 h-48 rounded-lg flex flex-col justify-around pt-10 pb-8 shadow-md;
 }
 .balance-header{
   @apply text-white text-center text-2xl;
@@ -24,7 +24,7 @@
   @apply text-white text-center font-semibold text-4xl tracking-widest mb-3 -mt-3
 }
 .balance-btn{
-  @apply rounded-full bg-white text-gray-700 h-12 w-32 flex flex-col justify-center;
+  @apply text-gray-700 ;
 }
 .carousel{
   @apply mb-5 h-48 rounded-lg flex max-w-full shadow-lg;
