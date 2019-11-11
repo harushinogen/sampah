@@ -780,6 +780,7 @@ video {
 .sidebar{
   width: 80%;
   max-width: 20rem;
+  overflow: auto;
   height: 100vh;
   background-color: #fff;
   position: fixed;
@@ -849,9 +850,9 @@ video {
 .sidebar-link{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 3rem;
+  padding-bottom: 0.75rem;
   border-radius: 0.25rem;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   display: block;
   font-weight: 600;
 }

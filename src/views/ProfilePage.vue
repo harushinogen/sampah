@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="flex justify-center justify-end flex-grow flex-col pt-20">
-      <router-link to="/landing" class="text-white text-center text-xl pt-3 pb-4 w-40 font-semibold rounded-full bg-red-500 mx-auto">Logout</router-link>
+      <router-link to="/landing" class="text-white text-center text-xl mb-5 pt-3 pb-4 w-40 font-semibold rounded-full bg-red-500 mx-auto">Logout</router-link>
     </div>
   </div>
 </template>
