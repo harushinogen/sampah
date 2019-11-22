@@ -1,6 +1,6 @@
 <template>
 	<div id="history-page">
-		<Titlebar class="text-gray-800" title="Riwayat"></Titlebar>
+		<Titlebar class="text-gray-800" title="Riwayat" route="/"></Titlebar>
 		<div class="flex justify-between h-16">
 			<div class="select-container" 
 			v-on:mouseleave="() => showCategoryItem = false" 

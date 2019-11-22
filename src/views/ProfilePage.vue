@@ -1,7 +1,7 @@
 <template>
   <div id="profile" class="flex flex-col">
     <div class="rounded-b-lg h-64 shadow-lg pt-3 text-gray-100" style="background: linear-gradient(119.15deg, #68D391 0%, #38A169 100.7%);">
-      <Titlebar title="Profile"></Titlebar>
+      <Titlebar title="Profile" route="/"></Titlebar>
       <div style="background-image: url(img/863589.png)" class="profile-pic mx-auto h-24 w-24 border-4 border-white"></div>
       <p class="text-xl text-center mt-2">Konjiki no Yami</p>
       <p class="text-center">@yami_chan</p>

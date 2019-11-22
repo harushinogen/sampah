@@ -5,6 +5,7 @@ import App from '../App.vue'
 import HistoryPage from '../views/HistoryPage.vue'
 import ProfilePage from '../views/ProfilePage.vue'
 import LandingPage from '../views/Landing.vue'
+import LoginPage from '../views/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +32,12 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: ProfilePage,
+    meta: { transitionName: 'slide' }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginPage,
     meta: { transitionName: 'slide' }
   },
   {
